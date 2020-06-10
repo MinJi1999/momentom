@@ -2,22 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MOMENTUM</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="js-clock">
+    <div class="js-clock clock">
         <h1>00:00</h1>
     </div>
-    <form class="js-form form">
-        <input type="text" placeholder="What is your name?">
+    <form class="js-form nameForm">
+        <input class="nameInput"type="text" placeholder="What is your name?">
     </form>
     <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
+    <form class="js-toDoForm toDoForm">
+        <input class="toDoInput"type="text" placeholder="Write a to do" />
     </form>
-    <ul class="js-toDoList"></ul>
-    <span class="js-weather"></span>
+    <ul type = "none" class="js-toDoList toDoList"></ul>
+    </div>
+    <span class="js-weather weather"></span>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
