@@ -1,5 +1,11 @@
-.form{
-    display: none;
+body{
+  width: 100%;
+  height: 100%;
+  background-color: #b3b3b3;
+}
+
+.js-form{
+  display: none;
 }
 .greetings{
     display: none;
@@ -7,4 +13,23 @@
 
 .showing{
     display: block;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.bgImage{
+  position: absolute;
+  top : 0;
+  left : 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation : fadeIn 1s linear;
 }
