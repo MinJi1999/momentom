@@ -29,8 +29,9 @@ form, input, h4, h1,div,span{
   font-size: 35px;
   position: relative;
   top: 15px;
-  left: 495px;
+  left: 410px;
   width: 700px;
+  text-align: center;
 }
 .nameForm{
   display: none;
