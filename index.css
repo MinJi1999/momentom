@@ -35,7 +35,7 @@ form, input, h4, h1,div,span{
 .nameForm{
   display: none;
   position: relative;
-  top : 125px;
+  top : 25px;
   left: 600px;
   width: 500px;
 }
@@ -58,7 +58,7 @@ form, input, h4, h1,div,span{
 
 .toDoForm{
   position: relative;
-  top: 15px;
+  top: 18px;
   left: 600px;
   width: 500px;
 }
