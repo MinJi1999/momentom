@@ -115,7 +115,7 @@ button{
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
 body{
-
+  margin: 0;
 }
 .bgImage{
   width: 100%;
