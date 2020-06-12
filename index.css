@@ -114,7 +114,7 @@ button{
   animation : fadeIn 1s linear;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+@media( max-width: 500px ){
 body{
   margin: 0;
 }
@@ -125,17 +125,18 @@ body{
 }
 .weather{
   position: relative;
-  top: 10px;
-  left: 370px;
+  top: 5px;
+  left: 445px;
   font-size: 15px;
   text-align: right;
 }
 .clock{
   font-size: 40px;
   position: relative;
-  top : 50px;
-  left: 60px;
-  width: 320px;
+  top : 70px;
+  left: 95px;
+  width: 150px;
+  margin: 0 0 0 0;
 }
 h1{
   margin: 0 0 0 0;
@@ -167,24 +168,24 @@ h1{
 
 .toDoForm{
   position: relative;
-  top: 20px;
-  left: 125px;
+  top: 40px;
+  left: 155px;
   width: 200px;
 }
 .greetings{
   font-size: 20px;
   position: relative;
-  top: 18px;
-  left: 55px;
-  width: 350px;
+  top: 45px;
+  left: 100px;
+  width: 320px;
 }
 .toDoList{
   font-weight: bold;
   font-size: 15px;
   position: relative;
   width: 250px;
-  top: 20px;
-  left: 60px;
+  top: 30px;
+  left: 90px;
   text-align: center;
 }
 button{
