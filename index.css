@@ -114,7 +114,7 @@ button{
   animation : fadeIn 1s linear;
 }
 
-@media( max-width: 500px ){
+@media (max-width: 480px){
 body{
   margin: 0;
 }
