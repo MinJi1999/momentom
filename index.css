@@ -114,7 +114,7 @@ button{
   animation : fadeIn 1s linear;
 }
 
-@media (max-width: 410px){
+@media (max-width: 480px){
 body{
   margin: 0;
 }
@@ -126,7 +126,7 @@ body{
 .weather{
   position: relative;
   top: 5px;
-  left: 350px;
+  left: 415px;
   font-size: 15px;
   text-align: right;
 }
@@ -134,7 +134,7 @@ body{
   font-size: 35px;
   position: relative;
   top : 70px;
-  left: 70px;
+  left: 105px;
   width: 150px;
   margin: 0 0 0 0;
 }
@@ -144,7 +144,7 @@ h1{
 .nameForm{
   position: relative;
   top : 62px;
-  left: 110px;
+  left: 150px;
   width: 200px;
   margin: 0px 0px 0px 0px;
 }
@@ -168,7 +168,7 @@ h1{
 .toDoForm{
   position: relative;
   top: 65px;
-  left: 110px;
+  left: 145px;
   width: 200px;
 }
 .greetings{
