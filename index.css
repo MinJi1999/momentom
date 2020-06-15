@@ -12,41 +12,38 @@ form, input, h4, h1,div,span{
   color: white;
 }
 .weather{
-  position: relative;
-  top: 10px;
-  left: 1450px;
+  width: 100px;
   font-size: 22px;
-  text-align: right;
+  margin-left: auto; 
+  display: block;
+  text-align: center;
+}
+h1{
+  margin : 0;
 }
 .clock{
+  text-align: center;
   font-size: 55px;
-  position: relative;
-  top : 100px;
-  left: 535px;
   width: 500px;
+  margin: 0 auto; 
 }
 .greetings{
   font-size: 35px;
-  position: relative;
-  top: 15px;
-  left: 410px;
   width: 700px;
-  text-align: center;
+  margin: 0 auto;
 }
 .nameForm{
   display: none;
-  position: relative;
-  top : 25px;
-  left: 600px;
+  margin: 0 auto;
   width: 500px;
+  text-align: center;
 }
 .nameInput{
   background: none;
   font-size: 30px;
   color : white;
   border: none;
-  width: 300px;
-  text-align: center;
+ 
 }
 .toDoInput{
   background: none;
@@ -58,19 +55,19 @@ form, input, h4, h1,div,span{
   }
 
 .toDoForm{
-  position: relative;
-  top: 18px;
-  left: 600px;
+  margin: 0 auto;
   width: 500px;
+  text-align: center;
+}
+ul{
+  padding: 0;
 }
 .toDoList{
   font-weight: bold;
   font-size: 25px;
-  position: relative;
-  width: 500px;
-  top: 15px;
-  left: 470px;
+  width: 400px;
   text-align: center;
+  margin: 0 auto;
 }
 .toDoList>li{
   border-bottom: white solid 1.5px;
@@ -88,7 +85,7 @@ button{
 }
 .greetings{
     display: none;
-    margin-bottom: 8px;
+    margin: 0 auto;
 }
 
 .showing{
@@ -113,6 +110,8 @@ button{
   z-index: -1;
   animation : fadeIn 1s linear;
 }
+
+  
 
 @media (max-width: 480px){
 body{
