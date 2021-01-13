@@ -1,27 +1,77 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-    <title>MOMENTUM</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <span class="js-weather weather"></span>
-    <div class="js-clock clock">
-        <h1>00 : 00</h1>
-    </div>
-    <form class="js-form nameForm">
-        <input class="nameInput"type="text" placeholder="What is your name?">
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm toDoForm">
-        <input class="toDoInput"type="text" placeholder="Write a to do" />
-    </form>
-    <ul type = "none" class="js-toDoList toDoList"></ul>
-    <script src="clock.js"></script>
-    <script src="greeting.js"></script>
-    <script src="todo.js"></script>
-    <script src="bg.js"></script>
-    <script src="weather.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <title>MOMENTUM</title>
+        <link rel="stylesheet" href="index.css"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+            rel="stylesheet"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link
+                href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
+                rel="stylesheet">    
+        </head>
+
+    <body>
+        <div class="temps">
+            <div class="tempsNum">40º</div>
+            <div class="tempsNum">30º</div>
+            <div class="tempsNum">20º</div>
+            <div class="tempsNum">10º</div>
+            <div class="tempsNum">0º</div>
+            <div class="tempsNum">-10º</div>
+            <div class="tempsNum">-20º</div>
+        </div>
+        <div class="weather-container">
+            <span class="js-weather weather"></span>
+            <div class="thermometer">
+                <div class="thermometerInside">
+                    <span class="red-water"></span>
+                </div>
+            </div>
+            <div class="white-circle"></div>
+        </div>
+        <div class="red-circle"></div>
+        <div class="menu-icon">
+            <i class="fas fa-align-justify"></i>
+        </div>
+        <nav class="menu_container">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <a class="top_menu_item" href="./게임/index.html">G<br/>A<br/>M<br/>E</a>
+        </nav>
+        <div class="wrapper">
+            <h1 class="js-clock clock">00 : 00</h1>
+            <form class="js-form nameForm">
+                <input class="nameInput" type="text" placeholder="What is your name?">
+            </form>
+            <div class="js-greetings greetings"></div>
+            <form class="js-toDoForm toDoForm">
+                <input class="toDoInput" type="text" placeholder="Write a to do"/>
+            </form>
+            <ul type="none" class="js-toDoList toDoList"></ul>
+        </div>
+        <div class="quoteSection">
+            <div class="quoteContainer">
+                <div class="quoteText"></div>
+                <div class="quoteAuthor"></div>
+            </div>
+        </div>
+        <script src="components/weather.js"></script>
+        <script src="components/clock.js"></script>
+        <script src="components/greeting.js"></script>
+        <script src="components/todo.js"></script>
+        <script src="components/bg.js"></script>
+        <script src="components/quote.js"></script>
+        <script src="components/menu.js"></script>
+    </body>
 </html>

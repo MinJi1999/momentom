@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap"
+            rel="stylesheet"/> 
+    </head>
+    <body>
+        <div id="neonContainer">
+            <div id="neonText">
+                DO YOU WANNA PLAY MY LITTLE GAME?
+            </div>
+            <div id="neonBox">
+                <a href="#" id="noBtn">
+                    NO
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <a href="#" id="playBtn">
+                    PLAY
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div id="game-console">
+            <div id="game-container">
+                <div id="btn-container1">
+                    <button id="character-change-btn-grey"></button>
+                    <button id="character-change-btn-white"></button>
+                </div>
+                <div id="btn-container2">
+                    <button id="character-change-btn-green"></button>
+                    <button id="character-change-btn-orange"></button>
+                </div>
+                <div id="game">
+                    <h4 id="gameScore"></h4>
+                    <div id="grey"></div>
+                    <div id="white"></div>
+                    <div id="green"></div>
+                    <div id="orange"></div>
+                    <div id="character"></div>
+                </div>
+                <div id="button-container">
+                    <button id="restartButton" onclick="restartGame()">R</button>
+                    <button id="jumpButton" onclick="jump()">J</button>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

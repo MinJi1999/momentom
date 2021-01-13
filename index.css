@@ -1,185 +1,367 @@
-body{
-
-  background-color: #b3b3b3;
-  margin: 0;
+body {
+    position: relative;
+    font-family: 'Amiri', serif;   
+    font-weight: 100;
+    background-color: #b3b3b3;
+    margin: 0;
+    color: white;
+    height: 838px;
 }
-form, input, h4, h1,div,span{
-  font-family: -apple-system;
+.temps{
+    position: absolute;
+    right: 45px;
+    top: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
-
-
-.clock, .toDoList, .greetings, .weather{
-  color: white;
+.tempsNum{
+    font-size: 13px;
+    margin-top: 2.5px;
 }
-.weather{
-  width: 100px;
-  font-size: 22px;
-  margin-left: auto;
-  display: block;
-  text-align: center;
-}
-h1{
-  margin : 0;
-}
-.clock{
-  text-align: center;
-  font-size: 55px;
-  width: 500px;
-  margin: 0 auto;
-}
-.greetings{
-  font-size: 35px;
-  width: 100%;
-  margin: 0 auto;
-}
-.nameForm{
-  display: none;
-  margin: 0 auto;
-  width: 500px;
-  text-align: center;
-}
-.nameInput{
-  background: none;
-  font-size: 30px;
-  color : white;
-  border: none;
-
-}
-.toDoInput{
-  background: none;
-  font-size: 30px;
-  color : white;
-  width: 300px;
-  text-align: center;
-  border: none;
-  }
-
-.toDoForm{
-  margin: 0 auto;
-  width: 500px;
-  text-align: center;
-}
-ul{
-  padding: 0;
-}
-.toDoList{
-  font-weight: bold;
-  font-size: 25px;
-  width: 400px;
-  text-align: center;
-  margin: 0 auto;
-}
-.toDoList>li{
-  border-bottom: white solid 1.5px;
-}
-button{
-  background: none;
-  border: none;
-  font-size: 20px;
+.weather-container {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.nameInput::placeholder,
-.toDoInput::placeholder {
-  color:white;
-  font-weight: bold;
+.weather {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 10px 0 0;
 }
-.greetings{
+.thermometer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 13px;
+    height: 170px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 20px;
+    margin: 9px 25px 0 0;
+}
+.white-circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin: -7 19.1 0 0;
+}
+
+.thermometerInside{
+    position: absolute;
+    width: 7px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 0px;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+/* animation: up 5s; */
+/* @keyframes up{
+    0%{
+        height: 198px;
+    }
+    100%{
+        height: 0px;
+    }
+} */
+.red-water{
+  position: absolute;
+  background: red;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  border-radius: 43%;
+  transform-origin: 50% 48%;
+  transition-duration: 0.75s;
+  transition-timing-function: ease;
+}
+/*.thermometerInside:hover .red-water {
+    margin-bottom: -30px;
+    animation: rotate 2000ms infinite linear;
+  } 물 차오르는 애니;
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+  }*/
+.red-circle{
+    position: absolute;
+    right: 24px;
+    top: 257px;
+    z-index: 11;
+    background-color: rgba(255, 0, 0);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.menu-icon{
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    z-index: 10;
+    width: 0px;
+    height: 40px;
+}
+@keyframes icon-hide{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes icon-show{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fas {
+    z-index: 10;
+    font-size: 45px;
+    position: absolute;
+    cursor: pointer;
+}
+.menu-icon-remove {
     display: none;
-    margin: 0 auto;
-    text-align: center;
+}
+.menu_container {
+    position: absolute;
+    top: 30px;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    top: 20%;
+    height: 500px;
+    background-color: rgba(19, 0, 129, 0.281);
+    animation: menu-container 0.5s;
+}
+@keyframes list {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes menu-container-show {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes menu-container-hide {
+    from {
+        left: 0;
+    }
+    to {
+        left: -300px;
+    }
+}
+.menu_icon_line{
+    top: 200px;
+    width: 45px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+    position: relative;
 }
 
-.showing{
+.fa-times{
+    position: absolute;
+    top: 0px;
+    display: block;
+    padding: 8px;
+    font-size: 25px;
+    align-self: flex-end;
+    color: white;
+    cursor: pointer;
+    animation: menu-btn 3s;
+}
+@keyframes remove-icon{
+    from {
+        left: 0;
+    }
+    to {
+        left: -300px;
+    }
+}
+@keyframes menu-btn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@font-face {
+    font-family: 'NeoDunggeunmo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.top_menu_item {
+    position: relative;
+    display: block;
+    padding: 10px 40px;
+    font-family: 'NeoDunggeunmo';
+    text-align: center;
+    line-height: 100px;
+    font-size: 100px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
+}
+.top_menu_item:hover {
+    color: black;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.795);
+    opacity: 50%;
+}
+
+.showing {
     display: block;
 }
+.wrapper {
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    height: 300px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.clock {
+    position: relative;
+    z-index: 0;
+    font-size: 135px;
+    margin: 0;
+    height: 128px;
+    margin-bottom: 50px;
+}
+.nameInput,
+.todoInput {
+    position: relative;
+    z-index: 1;
+    font-family: 'Amiri', serif;
+    height: 70px;
+    border: none;
+    background: none;
+    font-size: 50px;
+    text-align: center;
+    width: auto;
+    color: white;
+}
+input::placeholder {
+    color: white;
+}
+.nameForm {
+    margin: 0px;
+    display: none;
+    height: 70px;
+}
+.greetings {
+    position: relative;
+    display: none;
+    font-size: 45px;
+    text-align: center;
+    height: 64px;
+    margin-bottom: 5px;
+}
+.toDoForm {
+    margin: 0;
+}
+.todoList {
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+    height: 290px;
+
+}
+button {
+    font-size: 25px;
+    background: none;
+    border: none;
+}
+.showing {
+    display: block;
+}
+.remove {
+    display: none;
+}
+.quoteSection {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.quoteContainer {
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 800px;
+    margin-bottom: 10px;
+}
+.quoteText {
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 17px;
+    transition: all 0.5s;
+}
+.quoteAuthor {
+    text-align: center;
+    transition: all 0.5s;
+    font-size: 18px;
+}
+.quoteText:hover {
+    text-shadow: 1px 1px 5px white;
+    transition: all 1s;
+
+}
+.quoteAuthor:hover {
+    text-align: center;
+    text-shadow: 1px 1px 5px white;
+    transition: all 1s;
+
+}
 @keyframes fadeIn {
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.bgImage{
-  position: absolute;
-  top : 0;
-  left : 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  animation : fadeIn 1s linear;
-}
-
-
-
-@media screen and (min-width:360px) and (max-width:480px){
-body{
-  margin: 0;
-}
-
-.bgImage{
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
-.weather{
-  width: 50px;
-  font-size: 15px;
-  text-align: right;
-}
-.clock{
-  font-size: 32px;
-  width: 300px;
-  margin: 0 auto;
-}
-
-h1{
-  margin: 0 0 0 0;
-}
-.nameForm{
-  width: 200px;
-  margin: 0 auto;
-}
-.nameInput{
-  background: none;
-  font-size: 20px;
-  color : white;
-  border: none;
-  width: 200px;
-  text-align: center;
-}
-.toDoInput{
-  background: none;
-  font-size: 23px;
-  color : white;
-  width: 200px;
-  text-align: center;
-  border: none;
-  }
-
-.toDoForm{
-  margin: 0 auto;
-  width: 200px;
-}
-
-.greetings{
-  font-size: 23px;
-  width: 250px;
-  margin: 0 auto;
-
-}
-.toDoList{
-  font-weight: bold;
-  font-size: 15px;
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-}
-button{
-  background: none;
-  border: none;
-  font-size: 15px;
-}
+.bgImage {
+    z-index: -10;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s linear;
 }
