@@ -138,52 +138,23 @@ body {
 .menu-icon-remove {
     display: none;
 }
-.menu_container {
+.menu-container {
     position: absolute;
-    top: 30px;
+    top: 20%;
     z-index: 10;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    top: 20%;
+    max-width: 0px;
     height: 500px;
+    overflow: hidden;
     background-color: rgba(19, 0, 129, 0.281);
     animation: menu-container 0.5s;
+    transition: all ease-in 0.2s;
 }
-@keyframes list {
-    from {
-        left: -300px;
-    }
-    to {
-        left: 0;
-    }
+.menu-container.show {
+    max-width: 130px;
 }
-@keyframes menu-container-show {
-    from {
-        left: -300px;
-    }
-    to {
-        left: 0;
-    }
-}
-@keyframes menu-container-hide {
-    from {
-        left: 0;
-    }
-    to {
-        left: -300px;
-    }
-}
-.menu_icon_line{
-    top: 200px;
-    width: 45px;
-    height: 6px;
-    border-radius: 3px;
-    background-color: white;
-    margin-bottom: 5px;
-    position: relative;
-}
-
 .fa-times{
     position: absolute;
     top: 0px;
@@ -195,32 +166,16 @@ body {
     cursor: pointer;
     animation: menu-btn 3s;
 }
-@keyframes remove-icon{
-    from {
-        left: 0;
-    }
-    to {
-        left: -300px;
-    }
-}
-@keyframes menu-btn{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
 @font-face {
     font-family: 'NeoDunggeunmo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-.top_menu_item {
+.link-to-game {
     position: relative;
-    display: block;
     padding: 10px 40px;
+    max-width: 0px;
     font-family: 'NeoDunggeunmo';
     text-align: center;
     line-height: 100px;
@@ -229,15 +184,8 @@ body {
     color: rgb(255, 255, 255);
     transition: all 0.5s;
 }
-.top_menu_item:hover {
-    color: black;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.795);
-    opacity: 50%;
-}
-
-.showing {
-    display: block;
+.link-to-game.show {
+    max-width: 130px;
 }
 .wrapper {
     position: absolute;
