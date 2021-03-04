@@ -1,23 +1,11 @@
 const menuIcon = document.querySelector(".menu-icon");
-const menuContainer = document.querySelector(".menu_container");
+const menuContainer = document.querySelector(".menu-container");
 const menuDeleteBtn = document.querySelector(".fa-times");
-menuIcon.style.display = "block";
-menuContainer.style.display = "none";
+const linkToGame = document.querySelector(".link-to-game");
 
-function menuListShowAndHide(){
-    menuIcon.style.animation = "icon-hide 1s";
-    setTimeout(() => {menuIcon.style.display = "none"}, 900);
-    menuContainer.style.animation = "menu-container-show 1s";    
-    menuContainer.style.display = "flex";
+function menuHideAndShow(){
+    menuContainer.classList.toggle("show");
+    linkToGame.classList.toggle("show");
 }
-menuIcon.addEventListener("click", menuListShowAndHide);
 
-menuDeleteBtn.addEventListener("click", () => {
-    menuIcon.style.animation = "icon-show 1s";
-    menuIcon.style.display = "block";
-    menuContainer.style.animation = "menu-container-hide 1s";
-    setTimeout(() => {menuContainer.style.display = "none"}, 900);
-})
-
-
-
+menuIcon.addEventListener("click", menuHideAndShow)
